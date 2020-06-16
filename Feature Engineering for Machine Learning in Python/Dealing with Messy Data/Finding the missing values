@@ -1,0 +1,7 @@
+While having a summary of how much of your data is missing can be useful, often you will need to find the exact locations of these missing values. Using the same subset of the StackOverflow data from the last exercise (sub_df), you will show how a value can be flagged as missing.
+
+print(sub_df.head(10))
+--------------------------
+print(sub_df.head(10).notnull())
+------------------------------------
+print(sub_df.head(10).notnull())

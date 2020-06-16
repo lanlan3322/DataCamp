@@ -1,0 +1,3 @@
+We want to use the Ash, Alcalinity of ash, and Magnesium columns in the wine dataset to train a linear model, but it's possible that these columns are all measured in different ways, which would bias a linear model. Using describe() to return descriptive statistics about this dataset, which of the following statements are true about the scale of data in these columns?
+
+wine[['Ash','Alcalinity of ash','Magnesium']].describe()

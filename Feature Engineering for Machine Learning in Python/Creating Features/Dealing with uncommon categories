@@ -1,0 +1,21 @@
+Some features can have many different categories but a very uneven distribution of their occurrences. Take for example Data Science's favorite languages to code in, some common choices are Python, R, and Julia, but there can be individuals with bespoke choices, like FORTRAN, C etc. In these cases, you may not want to create a feature for each value, but only the more common occurrences.
+
+Extract the Country column of so_survey_df as a series and assign it to countries.
+Find the counts of each category in the newly created countries series.
+
+# Create a series out of the Country column
+countries = so_survey_df['Country']
+ 
+# Get the counts of each category
+country_counts = countries.value_counts()
+-------------------------------------------------------------------------
+# Create a mask for only categories that occur less than 10 times
+mask = countries.isin(country_counts[country_counts < 10].index)
+ 
+# Print the updated category counts
+print(mask.head())
+-------------------------------------------------------------------------
+countries[mask] = 'Other'
+ 
+# Print the updated category counts
+print(countries.value_counts())

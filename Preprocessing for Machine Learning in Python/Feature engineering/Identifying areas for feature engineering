@@ -1,0 +1,5 @@
+Take an exploratory look at the volunteer dataset, using the variable of that name. Which of the following columns would you want to perform a feature engineering task on?
+
+volunteer[['title','created_date','category_desc']].head(1)
+
+2,3,4
